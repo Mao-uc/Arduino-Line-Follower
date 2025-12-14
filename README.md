@@ -1,9 +1,20 @@
-# Arduino-Line-Follower
+# Arduino Line Follower
 
-OUC的机器人小组项目课程任务之一，必须用三个/三路红外传感器才能实现。代码实际表现性能会因小车的结构的不同而产生一定差异，对于本组小车的结构而言，参数基本已经调到了最佳。相关演示视频已上传至b站。
+**Course Project Task for the OUC Robotics Club**
 
-开发板选择Arduino UNO R3/R4。因任务要求，需要ADC转换器ADS1115，应将其A0，A1，A2端分别连接三个IR传感器的D0端。
+This is one of the project tasks for the Robotics Club at OUC (Ocean University of China). **The task mandates the use of exactly three (or three-channel) infrared sensors.** The actual performance of the code may vary depending on the specific chassis structure. For our group's chassis design, the parameters have been finely tuned to near-optimal levels. A demonstration video has been uploaded to Bilibili.
 
-小建议：如果是2wd小车，即结构为2个定向轮加1个万向轮的，最好用胶水把万向轮的旋钮固定住，使其仅能朝一个方向运动，能够极大减轻小车的摇摆，巡线的效果相当丝滑。
+---
+### **Hardware Setup**
+*   **Main Controller:** Arduino UNO R3 / R4
+*   **Key Component:** As required by the task specifications, an **ADS1115 ADC converter** must be used.
+    *   **Connection:** Connect the A0, A1, and A2 channels of the ADS1115 to the **D0 output pins** of the three IR sensors, respectively.
 
-对于本组的小车结构可见演示视频：https://b23.tv/8U5A5iw 如果有任何问题可以私信b站联系。
+---
+### **Practical Tip for 2WD Chassis**
+For a 2WD chassis (consisting of two driven wheels and one caster ball/support wheel), it is highly recommended to **secure the swivel mechanism of the caster wheel** (e.g., using glue or a physical lock). This modification constrains its movement to a single direction, significantly reducing wobble and resulting in a much smoother and more stable line-following performance.
+
+---
+### **Video & Contact**
+*   **Demonstration Video & Our Chassis:** You can see the working demonstration and our specific chassis structure in this video: **[https://b23.tv/8U5A5iw](https://b23.tv/8U5A5iw)**
+*   **Questions?** Feel free to send a private message via Bilibili if you have any questions.
